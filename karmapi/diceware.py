@@ -254,11 +254,11 @@ class StingingBats(pig.Canvas):
                 self.draw_beanstalks()
 
             self.beanstalk.step()
-            
+
             if self.beanstalk.is_magic():
                 self.beanstalks.append(
                     BeanStalk(self.beanstalk.x))
-            
+
             await curio.sleep(self.sleep)
 
 

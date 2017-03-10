@@ -150,7 +150,7 @@ class Swarm:
             colour = colours[random.randint(0, len(colours) - 1)]
 
             canvas.create_oval(xx-size, yy-size, xx+size, yy+size, fill=colour)
-            
+
 
 class SwoopingMantaRay:
 
@@ -164,7 +164,7 @@ class SwoopingMantaRay:
         self.angle = random.random() * 360.
 
         self.speed = random.random() / 2
-        
+
         self.step = 0
         self.this_step = random.randint(40, 100)
 
@@ -192,7 +192,7 @@ class SwoopingMantaRay:
 
         head_colour = colours[random.randint(0, len(colours) - 1)]
         tail_colour = colours[random.randint(0, len(colours) - 1)]
-        
+
 
         extent = random.randint(20, 40)
 
@@ -202,7 +202,7 @@ class SwoopingMantaRay:
                           start=self.angle, extent=extent/2, fill=head_colour)
         canvas.create_arc(xx-size, yy-size, xx+size, yy+size,
                           start=self.angle + extent/2, extent=extent/2, fill=tail_colour)
-        
+
 
         self.step += 1
 
@@ -212,5 +212,3 @@ class SwoopingMantaRay:
             self.this_step = random.randint(40, 100)
 
         # FIXME: draw tail -- sine wave angle of dangle based on dx, dy
-        
-        
