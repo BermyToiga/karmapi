@@ -234,9 +234,9 @@ class StingingBats(pig.Canvas):
         for bean in self.beanstalks:
             if (tt - bean.create_time) < 20:
                 beans.append(bean)
-                
+
         self.beanstalks = beans
-        
+
 
     async def run(self):
         self.sleep = 0.1
@@ -266,13 +266,10 @@ class StingingBats(pig.Canvas):
             if self.beanstalk.is_magic():
                 self.beanstalks.append(
                     BeanStalk(self.beanstalk.x))
-<<<<<<< HEAD
- 
+
             if self.beanstalks:
                 self.draw_beanstalks()
                 self.prune()
-=======
->>>>>>> 5d8445c788dcdbbbb1f4ef86f3a268e2f088b0da
 
             await curio.sleep(self.sleep)
 
